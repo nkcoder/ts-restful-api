@@ -8,6 +8,9 @@
 - nodemon: utility that automatically restarts the server on code changes during development
 - @types/express and @types/node: TypeScript type definitions for Express and Node.js
 
+- jest: 
+- supertest: 
+
 ## How to run
 
 The following command will compile the TypeScript code and run the server using `ts-node`:

@@ -1,5 +1,3 @@
-import internal from "stream";
-
 export interface Product {
     id: number;
     name: string;
