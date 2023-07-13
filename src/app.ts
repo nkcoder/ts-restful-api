@@ -24,3 +24,15 @@ app.post("/products", (req: Request, res: Response) => {
   products.push(newProduct);
   res.status(201).json(newProduct);
 });
+
+app.get('/products/:id', (req: Request, res: Response) => {
+  console.log(`try to get product by id: ${req.params.id}`);
+  const productId = parseInt(req.params.id);
+  const product = products.find(p => p.id === productId);
+  
+  if (product) {
+    res.json(product);
+  } else {
+    res.status(404).json({error: 'Product not found.'});
+  }
+});
